@@ -21,7 +21,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v2/appointment/aallAppointments",
+          "https://register-backend-r8qp.onrender.com/api/v2/appointment/aallAppointments",
           { withCredentials: true }
         );
         setAppointments(response.data.appointments);
@@ -35,7 +35,7 @@ const Dashboard = () => {
 
   const handleAppDepart= async (appointmentId, departed)=>{
       try{
-        const response = await axios.put(`http://localhost:4000/api/v2/appointment/uupdate/${appointmentId}`,{departed_time},{withCredentials: true});;
+        const response = await axios.put(`https://register-backend-r8qp.onrender.com/api/v2/appointment/uupdate/${appointmentId}`,{departed_time},{withCredentials: true});;
         setAppointments((prev) => {
   return prev.map((appoint) => {
     return appoint._id === appointmentId ? { ...appoint, departed_time:departed } : appoint;
