@@ -18,7 +18,7 @@ const Register = () => {
   const handleRegister= async(e) => {
     e.preventDefault();
     try{
-        const  response= await axios.post("http://localhost:4000/api/v2/user/register", {firstName,lastName,email,password,dob,role:"random",phoneNumber,gender}, {
+        const  response= await axios.post("https://register-backend-r8qp.onrender.com/api/v2/user/register", {firstName,lastName,email,password,dob,role:"random",phoneNumber,gender}, {
           withCredentials: true, headers: {'Content-Type': 'application/json'}, 
         })
         
