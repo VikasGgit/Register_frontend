@@ -123,7 +123,7 @@ const Appointment = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:4000/api/v2/appointment/appointment',
+        'https://register-backend-r8qp.onrender.com/api/v2/appointment/appointment',
         {
           name,
           dob,
