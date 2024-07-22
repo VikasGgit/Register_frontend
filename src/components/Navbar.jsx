@@ -13,7 +13,7 @@ const Navbar = () => {
     const navigateto=useNavigate();
     const handleLogout=async()=>{
        {
-            await axios.get("http://localhost:4000/api/v2/user/logout", 
+            await axios.get("https://register-backend-r8qp.onrender.com/api/v2/user/logout", 
             { withCredentials: true,}).then((response)=>{
                 toast.success(response.data.message);
                 console.log(isAuthenticated);
