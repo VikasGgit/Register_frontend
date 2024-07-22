@@ -10,7 +10,7 @@ const Message = () => {
     try{
       await axios
       .post(
-        "http://localhost:4000/api/v2/message/send", {firstName, lastName, email, phoneNumber, message}, {withCredentials: true,
+        "https://register-backend-r8qp.onrender.com/api/v2/message/send", {firstName, lastName, email, phoneNumber, message}, {withCredentials: true,
               headers: {'Content-Type': 'application/json'}
         },
       ).then((res)=>{
